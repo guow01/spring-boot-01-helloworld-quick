@@ -1,0 +1,28 @@
+server:
+  port: 8082
+
+person:
+  age: 11
+  lists:
+    -1
+    -2
+  dog:
+    age: ${random.int}
+    name: ${random.uuid}dog
+  name: guow
+
+spring:
+  profiles:
+    active: dev
+
+---
+server:
+  port: 8083
+spring:
+  profiles: dev
+
+---
+server:
+  port: 8084
+spring:
+  profiles: prod
